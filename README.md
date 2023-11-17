@@ -65,10 +65,10 @@ The full documentation for PAF development is available here: [PAF Documentation
 
 Our official examples for various processing engines:
 
+- [AnyBody](https://github.com/qualisys/paf-anybody-example)
 - [Excel](https://github.com/qualisys/paf-excel-example)
 - [Matlab](https://github.com/qualisys/paf-matlab-example)
 - [OpenSim](https://github.com/qualisys/paf-opensim-example)
-- [AnyBody](https://github.com/qualisys/paf-anybody-example)
 - [Python](https://github.com/qualisys/paf-python-example)
 - [Theia Markerless](https://github.com/qualisys/paf-theia-markerless-example)
 - [Theia Markerless Comparison](https://github.com/qualisys/paf-theia-markerless-comparison-example)
