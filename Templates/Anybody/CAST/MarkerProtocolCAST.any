@@ -1,0 +1,710 @@
+#define _L_HEAD
+#define _R_HEAD
+#define _SGL
+#define _CV7
+#define _L_SIA
+#define _R_SIA
+#define _TV10
+#define _L_SAE
+#define _L_HUM
+#define _L_HLE
+#define _L_RSP
+#define _L_USP
+#define _L_HM2
+
+#define _R_SAE
+#define _R_HUM
+#define _R_HLE
+#define _R_RSP
+#define _R_USP
+#define _R_HM2
+
+#define _R_TH1 
+#define _R_TH2
+#define _R_TH3
+#define _R_TH4
+#ifdef STATIC
+#define _R_FLE
+#endif
+#define _R_SK1
+#define _R_SK2
+#define _R_SK3
+#define _R_SK4
+#ifdef STATIC
+#define _R_FAL
+#endif
+#ifdef STATIC
+#define _R_FM1
+#endif
+#define _R_FM2
+#define _R_FM5
+#define _R_FCC
+#define _R_MT5
+
+#define _L_TH1 
+#define _L_TH2
+#define _L_TH3
+#define _L_TH4
+#ifdef STATIC
+#define _L_FLE 
+#endif
+#define _L_SK1
+#define _L_SK2
+#define _L_SK3
+#define _L_SK4
+#ifdef STATIC
+#define _L_FAL
+#endif
+#ifdef STATIC
+#define _L_FM1
+#endif
+#define _L_FM2
+#define _L_FM5
+#define _L_FCC
+#define _L_MT5
+
+#define _L_IAS
+#define _L_IPS
+#define _R_IAS
+#define _R_IPS
+
+
+
+
+
+
+
+#ifdef _L_HEAD
+// Marker just above the ear
+CreateMarkerDriver L_HEAD (
+MarkerPlacement=Trunk.SegmentsThorax.SkullSeg, 
+OptX=OFF,OptY=ON,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.01,0.04,-0.085};
+};
+#endif
+
+#ifdef _R_HEAD
+// Marker just above the ear
+CreateMarkerDriver R_HEAD (
+MarkerPlacement=Trunk.SegmentsThorax.SkullSeg, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.01,0.04,0.085}; 
+};
+#endif
+
+#ifdef _SGL
+
+// Marker on the Glabulla
+CreateMarkerDriver SGL (
+MarkerPlacement=Trunk.SegmentsThorax.SkullSeg, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.11,0.06,0.0}; 
+};
+#endif
+
+#ifdef _CV7
+// Marker on the Cervical Vertebra 7
+CreateMarkerDriver CV7 (
+MarkerPlacement=Trunk.SegmentsThorax.ThoraxSeg,
+OptX=OFF,OptY=ON,OptZ=OFF,  
+PlaceMarkerAt = T1C7JntNode,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.065, 0.00, 0};
+};
+#endif
+
+#ifdef _L_SIA
+CreateMarkerDriver L_SIA (
+MarkerPlacement=Left.ShoulderArm.Seg.Scapula, 
+PlaceMarkerAt= ai, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.00,0.00,0.0};
+};
+#endif
+
+#ifdef _R_SIA
+CreateMarkerDriver R_SIA (
+MarkerPlacement=Right.ShoulderArm.Seg.Scapula, 
+PlaceMarkerAt= ai, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.00,0.00,0.0};
+};
+#endif
+#ifdef _TV10
+// Marker on the Thoracic Vertebra 10
+CreateMarkerDriver TV10 (
+MarkerPlacement=Trunk.SegmentsThorax.ThoraxSeg, 
+OptX=OFF,OptY=ON,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.05,0.187,0};
+};
+#endif
+#ifdef _L_SAE
+// Marker on Scapula - Acromial Edge
+CreateMarkerDriver L_SAE (
+MarkerPlacement=Left.ShoulderArm.Seg.Scapula, 
+OptX=ON,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.00,-0.00,-0.015};
+};
+#endif
+#ifdef _L_HUM
+// Marker on the Left Upper Arm
+CreateMarkerDriver L_HUM (
+MarkerPlacement=Left.ShoulderArm.Seg.Humerus,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt ={-0.03,-0.19,0.01}; 
+};
+#endif
+#ifdef _L_HLE
+// Marker on Humerus - Lateral Epicondyle 
+CreateMarkerDriver L_HLE (
+MarkerPlacement=Left.ShoulderArm.Seg.Humerus, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.045,-0.35, 0.015};
+};
+#endif
+#ifdef _L_RSP
+// Marker on Radius - Styloid Process
+CreateMarkerDriver L_RSP (
+MarkerPlacement=Left.ShoulderArm.Seg.Radius,
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.22, 0.05, 0.0};
+
+};
+#endif
+#ifdef _L_USP
+//Marker on Ulna - Styloid Process
+CreateMarkerDriver L_USP (
+MarkerPlacement=Left.ShoulderArm.Seg.Radius, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+ sRelOpt = {-0.22, -0.03, 0.00};
+
+};
+#endif
+
+#ifdef _L_HM2
+// // Marker on the basis of forefinger
+CreateMarkerDriver L_HM2 (
+MarkerPlacement=Left.ShoulderArm.Seg.Hand, 
+OptX=OFF ,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.075,-0.02,-0.02};
+
+};
+#endif
+#ifdef _R_SAE
+//Scapula - Acromial Edge
+CreateMarkerDriver R_SAE (
+MarkerPlacement=Right.ShoulderArm.Seg.Scapula, 
+OptX=ON,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.00,0.00,-0.015};
+};
+#endif
+
+#ifdef _R_HUM
+// Marker on the Right Upper Arm
+CreateMarkerDriver R_HUM (
+MarkerPlacement=Right.ShoulderArm.Seg.Humerus, 
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt ={0.03,-0.24,0.01}; 
+};
+#endif
+#ifdef _R_HLE
+// Marker on Humerus - Lateral Epicondyle 
+CreateMarkerDriver R_HLE (
+MarkerPlacement=Right.ShoulderArm.Seg.Humerus, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.045,-0.35, 0.015};
+};
+#endif
+#ifdef _R_RSP
+// Marker on Radius - Styloid Process
+CreateMarkerDriver R_RSP (
+MarkerPlacement=Right.ShoulderArm.Seg.Radius, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+ sRelOpt = {-0.22, -0.05, 0.00};
+
+};
+#endif
+#ifdef _R_USP
+//Marker on Ulna - Styloid Process
+CreateMarkerDriver R_USP (
+MarkerPlacement=Right.ShoulderArm.Seg.Radius, 
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+    sRelOpt = {-0.22, 0.03, 0.0}; 
+};
+
+#endif
+#ifdef _R_HM2
+// Marker on the basis of forefinger
+CreateMarkerDriver R_HM2 (
+MarkerPlacement=Right.ShoulderArm.Seg.Hand, 
+OptX=OFF ,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.075,-0.02,0.02};
+
+};
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ifdef _L_IPS
+// Marker on the Left Posterior Superior Iliac
+CreateMarkerDriver L_IPS ( 
+MarkerName= L_IPS,
+UseC3DWeightResiduals = ON,
+MarkerPlacement=Trunk.SegmentsLumbar.PelvisSeg,
+OptX=OFF, OptY=OFF, OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.14,0.02,-0.04};
+};
+#endif
+
+
+#ifdef _R_IPS
+// Marker on the Right Posterior Superior Iliac
+CreateMarkerDriver R_IPS (
+MarkerName= R_IPS, 
+MarkerPlacement=Trunk.SegmentsLumbar.PelvisSeg,
+OptX=OFF, OptY=OFF, OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {-0.14,0.02, 0.04};
+};
+#endif
+
+#ifdef _R_IAS
+// Marker on the Right Anterior Superior Iliac
+CreateMarkerDriver R_IAA (
+MarkerName= R_IAS, 
+MarkerPlacement=Trunk.SegmentsLumbar.PelvisSeg,
+
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.025, 0.005, 0.125};
+};
+#endif
+
+#ifdef _L_IAS
+// Marker on the Left Anterior Superior Iliac
+CreateMarkerDriver L_IAS (
+MarkerName= L_IAS ,
+MarkerPlacement=Trunk.SegmentsLumbar.PelvisSeg,
+
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.025,0.005, -0.125};
+};
+#endif
+
+
+
+//// Lower Extremity Markers
+#ifdef _R_TH1
+// Marker on the Right Thigh cluster
+CreateMarkerDriver R_TH1 ( 
+MarkerName=  R_TH1,
+OptX=ON,OptY=ON,OptZ=ON,
+MarkerPlacement =Right.Leg.Seg.Thigh,
+UseC3DWeightResiduals=ON
+)= {
+  sRelOpt = {0.05, -0.15, 0.05};
+};
+#endif
+
+#ifdef _R_TH2 
+// Marker on the Right Thigh cluster
+CreateMarkerDriver R_TH2 ( 
+MarkerName=  R_TH2,
+OptX=ON,OptY=ON,OptZ=ON,
+MarkerPlacement =Right.Leg.Seg.Thigh,
+UseC3DWeightResiduals=ON
+)= {
+  sRelOpt = {0.05, -0.15, 0.05};
+  };
+#endif
+
+#ifdef _R_TH3
+// Marker on the Right Thigh cluster
+CreateMarkerDriver R_TH3 ( 
+MarkerName=  R_TH3,
+OptX=ON,OptY=ON,OptZ=ON,
+MarkerPlacement =Right.Leg.Seg.Thigh,
+UseC3DWeightResiduals=ON
+)= {
+  sRelOpt = {0.05, -0.15, 0.05};
+};
+#endif
+
+#ifdef _R_TH4
+// Marker on the Right Thigh cluster
+CreateMarkerDriver R_TH4 ( 
+MarkerName=  R_TH4,
+OptX=ON,OptY=ON,OptZ=ON,
+MarkerPlacement =Right.Leg.Seg.Thigh,
+UseC3DWeightResiduals=ON
+)= {
+  sRelOpt = {0.05 ,-0.15, 0.05};
+};
+#endif
+//
+
+#ifdef _R_FLE
+// Marker on the Lateral epicondyle
+CreateMarkerDriver R_FLE (
+MarkerName= R_FLE,
+MarkerPlacement= Right.Leg.Seg.Thigh,
+PlaceMarkerAt = EpicondylusFemorisLateralis,
+OptX=OFF,OptY=OFF,OptZ=OFF,
+WeightX=1.0,WeightY=1.0,WeightZ=1.0,
+UseC3DWeightResiduals=ON
+
+) = {
+  sRelOpt = {0.0, 0.0, 0.015};
+};
+#endif
+
+#ifdef _R_SK1
+// Marker on the Right Tibia cluster 
+CreateMarkerDriver R_SK1 (
+MarkerName= R_SK1, 
+MarkerPlacement=Right.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON
+) = {
+  sRelOpt = {0.0, -0.1, 0.06};
+};
+#endif
+
+
+#ifdef _R_SK2
+// Marker on the Right Tibia cluster 
+CreateMarkerDriver R_SK2 (
+MarkerName= R_SK2, 
+MarkerPlacement=Right.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON
+) = {
+  sRelOpt = {0.0, -0.1, 0.06};
+};
+#endif
+
+#ifdef _R_SK3
+// Marker on the Right Tibia cluster 
+CreateMarkerDriver R_SK3 (
+MarkerName= R_SK3, 
+MarkerPlacement=Right.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON
+) = {
+  sRelOpt = {0.0, -0.1, 0.06};
+};
+#endif
+
+
+#ifdef _R_SK4
+// Marker on the Right Tibia cluster 
+CreateMarkerDriver R_SK4 (
+MarkerName= R_SK4, 
+MarkerPlacement=Right.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON
+) = {
+  sRelOpt = {0.0, -0.1, 0.06};
+};
+#endif
+
+#ifdef _R_FAL
+// Marker on the Lateral prominence of the lateral malleolus 
+CreateMarkerDriver R_FAL ( 
+MarkerName= R_FAL ,
+MarkerPlacement=Right.Leg.Seg.Shank,
+PlaceMarkerAt = LateralMalleolus,
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.00, 0.0, 0.015};
+};
+#endif
+
+#ifdef _R_FM1
+// Marker on the Dorsal margin of the first metatarsal head
+CreateMarkerDriver R_FM1 (
+MarkerName= R_FM1,  
+MarkerPlacement=Right.Leg.Seg.Foot,
+PlaceMarkerAt = MetatarsalJoint1Node,
+OptX=OFF , OptY=OFF , OptZ=OFF,
+WeightX=1.0,WeightY=1.0,WeightZ=1.0,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, 0.02, 0.00};
+};
+#endif
+
+#ifdef _R_FM2
+// Marker on the Dorsal aspect of the second metatarsal head 
+CreateMarkerDriver RFM2 (
+MarkerName= R_FM2,  
+MarkerPlacement=Right.Leg.Seg.Foot,
+PlaceMarkerAt = MetatarsalJoint2Node,
+OptX=ON , OptY=ON , OptZ=ON,
+WeightX=1.0,WeightY=1.0,WeightZ=1.0,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, 0.01, 0.0};
+};
+#endif
+
+#ifdef _R_FM5
+// Marker on the Dorsal margin of the fifth metatarsal head
+CreateMarkerDriver R_FM5 (
+MarkerName= R_FM5,  
+MarkerPlacement=Right.Leg.Seg.Foot,
+PlaceMarkerAt = MetatarsalJoint5Node,
+OptX=ON , OptY=OFF , OptZ=OFF,
+WeightX=1.0,WeightY=1.0,WeightZ=1.0,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, 0.01, 0.0};
+};
+#endif
+
+
+#ifdef _R_FCC
+// Marker on the Aspect of the Achilles tendon insertion on the calcaneus
+CreateMarkerDriver R_FCC (
+MarkerName= R_FCC ,
+MarkerPlacement=Right.Leg.Seg.Foot,
+PlaceMarkerAt = HeelNode,
+OptX=OFF, OptY=OFF, OptZ=OFF,
+WeightX=1.0,WeightY=1.0,WeightZ=1.0,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt =  {-0.025, 0.0, -0.0};
+};
+#endif
+
+
+#ifdef _L_TH1
+// Marker on the left thigh cluster 
+CreateMarkerDriver L_TH1 ( 
+MarkerName= L_TH1,
+MarkerPlacement=Left.Leg.Seg.Thigh,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.05, -0.15, -0.05}; 
+};
+#endif
+
+#ifdef _L_TH2
+// Marker on the left thigh cluster 
+CreateMarkerDriver L_TH2( 
+MarkerName= L_TH2,
+MarkerPlacement=Left.Leg.Seg.Thigh,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.05, -0.15, -0.05}; 
+};
+#endif
+
+#ifdef _L_TH3
+// Marker on the left thigh cluster 
+CreateMarkerDriver L_TH3( 
+MarkerName= L_TH3,
+MarkerPlacement=Left.Leg.Seg.Thigh,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.05, -0.15 ,-0.05}; 
+};
+#endif
+
+#ifdef _L_TH4
+// Marker on the left thigh cluster 
+CreateMarkerDriver L_TH4( 
+MarkerName= L_TH4,
+MarkerPlacement=Left.Leg.Seg.Thigh,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.05, -0.15, -0.05}; 
+};
+#endif
+
+#ifdef _L_FLE
+// Marker on the Lateral epicondyle
+CreateMarkerDriver L_FLE ( 
+MarkerName= L_FLE ,
+MarkerPlacement=Left.Leg.Seg.Thigh,
+PlaceMarkerAt = EpicondylusFemorisLateralis,
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, 0.0, -0.015};
+};
+#endif
+
+#ifdef _L_SK1
+// Marker on the Left Tibia cluster 
+CreateMarkerDriver L_SK1 (
+MarkerName= L_SK1,
+MarkerPlacement=Left.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, -0.1, -0.06};
+};
+#endif
+
+#ifdef _L_SK2
+// Marker on the Left Tibia cluster 
+CreateMarkerDriver L_SK2 (
+MarkerName= L_SK2,
+MarkerPlacement=Left.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, -0.1, -0.06};
+};
+#endif
+
+#ifdef _L_SK3
+// Marker on the Left Tibia cluster 
+CreateMarkerDriver L_SK3 (
+MarkerName= L_SK3,
+MarkerPlacement=Left.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, -0.1, -0.06};
+};
+#endif
+
+#ifdef _L_SK4
+// Marker on the Left Tibia cluster 
+CreateMarkerDriver L_SK4 (
+MarkerName= L_SK4,
+MarkerPlacement=Left.Leg.Seg.Shank,
+OptX=ON,OptY=ON,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, -0.1, -0.06};
+};
+#endif
+
+#ifdef _L_FAL
+// Marker on the Lateral prominence of the lateral malleolus
+CreateMarkerDriver L_FAL (
+MarkerName= L_FAL,
+MarkerPlacement=Left.Leg.Seg.Shank,
+PlaceMarkerAt = LateralMalleolus,
+OptX=OFF,OptY=OFF,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, 0.0, -0.015};
+};
+#endif
+
+#ifdef _L_FM1
+// Marker on theDorsal margin of the first metatarsal head
+CreateMarkerDriver L_FM1 (
+MarkerName= L_FM1, 
+MarkerPlacement=Left.Leg.Seg.Foot,
+PlaceMarkerAt = MetatarsalJoint1Node,
+OptX=OFF,OptY=OFF ,OptZ=OFF,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, 0.02, 0.00};
+};
+#endif
+
+#ifdef _L_FM2
+// Marker on the Dorsal aspect of the second metatarsal head 
+CreateMarkerDriver L_FM2 (
+MarkerName= L_FM2, 
+MarkerPlacement=Left.Leg.Seg.Foot,
+PlaceMarkerAt = MetatarsalJoint2Node,
+OptX=ON,OptY=ON ,OptZ=ON,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt = {0.0, 0.01, 0.0};
+};
+#endif
+
+
+#ifdef _L_FM5
+// Marker on Dorsal margin of the fifth metatarsal head
+CreateMarkerDriver L_FM5 (
+MarkerName= L_FM5,  
+MarkerPlacement=Left.Leg.Seg.Foot, 
+PlaceMarkerAt = MetatarsalJoint5Node,
+OptX=ON,OptY=OFF,OptZ=OFF,  
+WeightX=1.0,WeightY=1.0,WeightZ=1.0,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt =    {0.0, 0.01, 0.0};
+
+};
+#endif
+
+#ifdef _L_FCC
+// Marker on Aspect of the Achilles tendon insertion on the calcaneu
+CreateMarkerDriver L_FCC(
+MarkerName= L_FCC, 
+MarkerPlacement=Left.Leg.Seg.Foot,
+PlaceMarkerAt = HeelNode,
+OptX=OFF, OptY=OFF, OptZ=OFF,
+WeightX=1.0,WeightY=1.0,WeightZ=1.0,
+UseC3DWeightResiduals=ON
+) = {
+  sRelOpt =  {-0.025, 0.0, 0.0};
+};
+#endif
+
+
