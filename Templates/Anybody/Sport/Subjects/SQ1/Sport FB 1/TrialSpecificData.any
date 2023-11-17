@@ -4,7 +4,7 @@ Main.ModelSetup.TrialSpecificData =
   // The trial(s) from which segment scaling and marker parameters are 
   // loaded from. This default to the current trial itself, if nothing is 
   // specififed.
-  LoadParametersFrom = {"../../../Subjects/SQ1/Static 1/Static 1"};
+  LoadParametersFrom = {"../Subjects/SQ1/Static 1/Static 1"};
   
   // This is the name of the trial c3d file without extension. 
   // Here we assume the c3d file has the same name as the mainfile directory.
