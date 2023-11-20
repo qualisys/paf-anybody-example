@@ -20,7 +20,7 @@ To download this example project to your computer, you can either:
    - Wiki and user forum on https://anyscript.org/
 2. Open PAF AnyBody Example
    - Inside, you will find 3 walking gait examples for the IOR, CAST, and Sport marker sets. Open the '01 John Doe' tree, and then select '2023-11-14_IOR'.
-   - Click 'Start Processing.' It generate an IOR folder in the current session containing all the necessary AnyBody scripts for this session.
+   - Click 'Start Processing.' It will generate an IOR folder in the current session containing all the necessary AnyBody scripts for this session.
    - Locate the '2023-11-14_IOR' folder and right-click to select 'Open folder in explorer.'
    - You will find a folder named 'IOR' (for the CAST project, this folder would be named 'CAST,' and similarly for the Sport marker set).
 3. Running AnyBody software
@@ -38,7 +38,7 @@ To download this example project to your computer, you can either:
 If the model fails to load, you may need to manually specify the installation path with of the model example and modify the script accordingly.
 1. During the installation of AnyBody Modeling, make a note of where the \Documents\AnyBody.7.4.x\AMMR.v2.4.4-Demo folder is located, or find it manually.
 2. Copy the path. In this case, it is C:\Users\UserName\Documents\AnyBody.7.4.x\AMMR.v2.4.4-Demo.
-3. Open the generated IOR project and locate the libdef.any file..
+3. Open the generated IOR project and locate the libdef.any file.
 4. Open it with a text editor, such as Notepad, and replace this line of code:
 #ifndef LIBDEF_ANY
 #include "<ANYBODY_PATH_INSTALLDIR>/AMMR/libdef.any"
