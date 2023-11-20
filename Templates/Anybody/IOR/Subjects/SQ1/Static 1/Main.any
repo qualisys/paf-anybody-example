@@ -1,6 +1,4 @@
-#ifndef LIBDEF_ANY
-#include "<ANYBODY_PATH_INSTALLDIR>/AMMR/libdef.any"
-#endif
+#include "../../../libdef.any"
 
 // Enter and edit Trial Specific Data in this file:
 #path MOCAP_TRIAL_SPECIFIC_DATA "TrialSpecificData.any"

@@ -5,6 +5,7 @@ Main.ModelSetup.TrialSpecificData =
   // This is the name of the trial c3d file without extension. 
   // Here we assume the c3d file has the same name as the mainfile directory.
   TrialFileName = MOCAP_NAME_MAINFILEDIR;
+  //TrialFileName = "\Subjects\SQ1\Static 1";
   
   // This the C3D frame where the analysis starts
   // If not specified it defaults to the first frame of the C3D file
