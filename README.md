@@ -50,7 +50,7 @@ with your path. In this example, it would be: #include "C:\Users\UserName\Docume
 
 
 ### Video tutorial
-
+Video tutorial located in the repository.
 
 ## Resources for using the Qualisys Project Automation Framework (PAF)
 
