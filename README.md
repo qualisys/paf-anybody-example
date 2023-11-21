@@ -30,7 +30,7 @@ To download this example project to your computer, you can either:
    4. Afterwards, select 'RunAnalysis' and press 'Execute.' This will perform inverse kinematics, inverse dynamics, and save the file.
    5. To process your dynamic trials, navigate to ..\IOR\Subjects\SQ1\IOR FB 1\Main.any, press 'Load,' choose 'RunAnalysis,' and then execute.
    6. Your dynamic trial will be processed, and you can review your data in 'Model View 1 => Chart 1.'
-   7. Follow the same processing procedure for other dynamic trials as described in step 6.
+   7. Follow the same processing procedure for other dynamic trials as described in step 5 and 6.
 
 
 
