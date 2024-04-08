@@ -35,6 +35,8 @@ To download this example project to your computer, you can either:
 
 
 ### Loading issues
+For different force plates used in your lab, you must modify the \paf-anybody-example-main\Templates\Anybody\IOR\ForcePlates.any file. This modification example is for the IOR markerset, but the process is identical for CAST and Sports; you only need to change the template folders. For Kistler force plates, set FORCEPLATE_TYPE = 3, and for AMTI force plates, set FORCEPLATE_TYPE = 2. By default, AMTI force plates are used, indicated by 'FORCEPLATE_TYPE = 2'.
+
 If the model fails to load, you may need to manually specify the installation path with of the model example and modify the script accordingly.
 1. During the installation of AnyBody Modeling, make a note of where the \Documents\AnyBody.7.4.x\AMMR.v2.4.4-Demo folder is located, or find it manually.
 2. Copy the path. In this case, it is C:\Users\UserName\Documents\AnyBody.7.4.x\AMMR.v2.4.4-Demo.
