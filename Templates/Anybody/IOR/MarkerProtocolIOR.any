@@ -75,7 +75,7 @@
 // Marker just above the ear
 CreateMarkerDriver L_HEAD (
 MarkerPlacement=Trunk.SegmentsThorax.SkullSeg, 
-OptX=OFF,OptY=OFF,OptZ=OFF,
+OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
   sRelOpt = {0.01,0.04,-0.085};
@@ -86,7 +86,7 @@ UseC3DWeightResiduals=ON
 // Marker just above the ear
 CreateMarkerDriver R_HEAD (
 MarkerPlacement=Trunk.SegmentsThorax.SkullSeg, 
-OptX=OFF,OptY=OFF,OptZ=OFF,
+OptX=ON,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
   sRelOpt = {0.01,0.04,0.085}; 
