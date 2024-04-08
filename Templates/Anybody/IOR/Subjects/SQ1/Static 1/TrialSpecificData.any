@@ -2,6 +2,8 @@
 
 Main.ModelSetup.TrialSpecificData = 
 {
+
+ Main.ModelSetup.C3DFileData.LowPassFilter.FilterForwardBackwardOnOff =Off;
   // This is the name of the trial c3d file without extension. 
   // Here we assume the c3d file has the same name as the mainfile directory.
   TrialFileName = MOCAP_NAME_MAINFILEDIR;
