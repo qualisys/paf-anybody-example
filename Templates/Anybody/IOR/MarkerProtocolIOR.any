@@ -222,7 +222,7 @@ MarkerPlacement=Left.ShoulderArm.Seg.Humerus,
 OptX=OFF,OptY=OFF,OptZ=OFF,
 UseC3DWeightResiduals=ON
 ) = {
-  sRelOpt = {-0.045,-0.35, 0.065};
+  sRelOpt = {-0.045,-0.35, 0.015};
 };
 #endif
 #ifdef _L_RSP
@@ -289,6 +289,8 @@ UseC3DWeightResiduals=ON
 ) = {
   sRelOpt = {0.045,-0.35, 0.015};
 };
+
+
 #endif
 #ifdef _R_RSP
 // Marker on Radius - Styloid Process
@@ -501,18 +503,21 @@ UseC3DWeightResiduals=ON
 #endif
 
 
+
+//// Lower Extremity Markers
 #ifdef _L_FTC
 // Lateral side of greater trochanter
 CreateMarkerDriver L_FTC ( 
-MarkerName= L_FTC,
-MarkerPlacement=Left.Leg.Seg.Thigh,
+MarkerName=  L_FTC,
 OptX=ON,OptY=ON,OptZ=ON,
+MarkerPlacement =Left.Leg.Seg.Thigh,
 UseC3DWeightResiduals=ON
-) = {
-  sRelOpt = {0.01, -0.10, -0.085}; 
-  
+)= {
+  sRelOpt = {0.01, -0.10, -0.085};
 };
 #endif
+
+
 
 
 #ifdef _L_FLE
