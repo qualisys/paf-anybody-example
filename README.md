@@ -1,7 +1,7 @@
 # Qualisys PAF AnyBody example
 
 This example automatically generates AnyBody projects for IOR, CAST, and Sport full-body marker sets for walking gait analyses using two Kistler force plates. 
-It prepares all necessary AnyBody scripts, copies all C3D files, establishes links between them, and also incorporates the weight and height of the subject. The project includes three full-body walking gait examples, each utilizing different marker sets. Once the project (IOR, CAST, or Sport) is generated, it can be run with the AnyBody Modeling software to produce the data. If the PAF AnyBody example is used with data without force plate, the script in Templates folder should be modified to be able to predict forces. This modification applies similarly to lower body analyses, running on a treadmill, etc. The project contains a 'Documentation' folder, which includes guides for IOR, CAST, and Sport marker sets.
+It prepares all necessary AnyBody scripts, copies all C3D files, establishes links between them, and also incorporates the weight and height of the subject. The project includes three full-body walking gait examples, each utilizing different marker sets. Once the project (IOR, CAST, or Sport) is generated, it can be run with the AnyBody Modeling software to produce the data. If the PAF AnyBody example is used with data without force plate, the script in 'Templates' folder should be modified to be able to predict forces. This modification applies similarly to lower body analyses, running on a treadmill, etc. The project contains a 'Documentation' folder, which includes guides for IOR, CAST, and Sport marker sets.
 
 ## Getting started
 To download this example project to your computer, you can either:
