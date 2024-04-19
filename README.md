@@ -1,6 +1,6 @@
 # Qualisys PAF AnyBody example
 
-This example automatically generates AnyBody projects for IOR, CAST, and Sport full-body marker sets for walking gait analyses using two force plates. 
+This example automatically generates AnyBody projects for IOR, CAST, and Sport full-body marker sets for walking gait analyses using two Kistler force plates. 
 It prepares all necessary AnyBody scripts, copies all C3D files, establishes links between them, and also incorporates the weight and height of the subject. The project includes three full-body walking gait examples, each utilizing different marker sets. Once the project (IOR, CAST, or Sport) is generated, it can be run with the AnyBody Modeling software to produce the data. If the PAF AnyBody example is used with data without force plate, the script should be modified to be able to predict forces. This modification applies similarly to lower body analyses, running on a treadmill, etc. The project contains a 'Documentation' folder, which includes guides for IOR, CAST, and Sport marker sets.
 
 ## Getting started
@@ -14,6 +14,7 @@ To download this example project to your computer, you can either:
 ### Preparation
 1. Downaload and install AnyBody Modeling System from https://www.anybodytech.com/resources/customer-downloads/ for exisiting customeres or request a trial version from https://www.anybodytech.com/resources/trial-license/
    Register the license (see the https://www.anybodytech.com/download/installguide-anybody/)
+   - Install demo files with models by going to Help in AnyBody software then pressing Demo... and selecting Demo tab
    - Getting started https://youtu.be/Y4H-8FMJlis with AnyBody videos on YouTube
    - E-learning https://www.youtube.com/user/anybodytech/videos videos on YouTube
    - Tutorials in AnyBody’s Help > Tutorials menu
@@ -21,7 +22,7 @@ To download this example project to your computer, you can either:
 2. Open PAF AnyBody Example
    - Inside, you will find 3 walking gait examples for the IOR, CAST, and Sport marker sets. Open the '01 John Doe' tree, and then select '2023-11-14_IOR'.
    - Click 'Start Processing.' It will generate an IOR folder in the current session containing all the necessary AnyBody scripts for this session.
-   - Locate the '2023-11-14_IOR' folder and right-click to select 'Open folder in explorer.'
+   - Locate the '2024-04-19_IOR' folder and right-click to select 'Open folder in explorer.'
    - You will find a folder named 'IOR' (for the CAST project, this folder would be named 'CAST,' and similarly for the Sport marker set).
 3. Running AnyBody software
    1. Open the file ..IOR\Subjects\SQ1\Static 1\Main.any using the AnyBody software.
@@ -38,15 +39,15 @@ To download this example project to your computer, you can either:
 For different force plates used in your lab, you must modify the \paf-anybody-example-main\Templates\Anybody\IOR\ForcePlates.any file. This modification example is for the IOR markerset, but the process is identical for CAST and Sports; you only need to change the template folders. For Kistler force plates, set FORCEPLATE_TYPE = 3, and for AMTI force plates, set FORCEPLATE_TYPE = 2. By default, Kistler force plates are used, indicated by 'FORCEPLATE_TYPE = 3'.
 
 If the model fails to load, you may need to manually specify the installation path with of the model example and modify the script accordingly.
-1. During the installation of AnyBody Modeling, make a note of where the \Documents\AnyBody.7.4.x\AMMR.v2.4.4-Demo folder is located, or find it manually.
-2. Copy the path. In this case, it is C:\Users\UserName\Documents\AnyBody.7.4.x\AMMR.v2.4.4-Demo.
+1. During the installation of AnyBody Modeling, make a note of where the \Documents\AnyBody.8.0.x\AMMR.v3.0.1-Demo folder is located, or find it manually.
+2. Copy the path. In this case, it is C:\Users\UserName\Documents\AnyBody.8.0.x\AMMR.v3.0.1-Demo
 3. Open the generated IOR project and locate the libdef.any file.
 4. Open it with a text editor, such as Notepad, and replace this line of code:
 #ifndef LIBDEF_ANY
 #include "<ANYBODY_PATH_INSTALLDIR>/AMMR/libdef.any"
 #endif
 
-with your path. In this example, it would be: #include "C:\Users\UserName\Documents\AnyBody.7.4.x/AMMR.v2.4.4-Demo/libdef.any" 
+with your path. In this example, it would be: #include "C:\Users\UserName\Documents\AnyBody.8.0.x\AMMR.v3.0.1-Demo\libdef.any" 
 5. You may also need to modify the main.any files in ..\IOR\Subjects\SQ1\ by replacing the code above with:
 #include "../../../libdef.any"
 
