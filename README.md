@@ -77,6 +77,7 @@ Our official examples for various processing engines:
 - [Theia Markerless](https://github.com/qualisys/paf-theia-markerless-example)
 - [Theia Markerless Comparison](https://github.com/qualisys/paf-theia-markerless-comparison-example)
 - [Theia Markerless True Hybrid](https://github.com/qualisys/paf-theia-markerless-true-hybrid-example)
+- [Theia Markerless Multisubject](https://github.com/qualisys/paf-theia-markerless-multisubject-example)
 - [Visual3D](https://github.com/qualisys/paf-visual3d-example)
 
 
